@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Trip Management System</title>
+  </head>
+  <body>
+    <header>
+      <iframe
+        scrolling="no"
+        border="0"
+        marginwidth="0"
+        marginheight="0"
+        allowtransparency="true"
+        src="https://www.ashesh.com.np/linknepali-time.php?time_only=no&amp;font_color=0093d0&amp;aj_time=yes&amp;font_size=12&amp;line_brake=0&amp;api=222152h288"
+        width="334"
+        height="22"
+        frameborder="0"
+      ></iframe>
+    </header>
+
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="/index.html">Add Trip</a>
+      <a href="/aboutUs.html">About Us</a>
+      <a href="bookList.html">Book List</a>
+    </nav>
+
+    <h1>Trip Management System</h1>
+
+    <form id="tripForm">
+      <label for="title">Title:</label>
+      <input type="text" id="title" required />
+
+      <label for="description">Description:</label>
+      <textarea id="description" style="height: 150px;"></textarea>
+
+      <label for="tripDays">Trip Days:</label>
+      <input type="number" id="tripDays" required />
+
+      <label for="tripCost">Trip Cost:</label>
+      <input type="number" id="tripCost" step="0.01" required />
+
+      <label for="destination">Destination:</label>
+      <input type="text" id="destination" required />
+
+      <label for="image">Image:</label>
+      <input type="file" id="image" name="files" oninput="imageUpload()" />
+
+      <button type="button" onclick="addTrip()">Add Trip</button>
+    </form>
+
+    <footer>
+      <p>&copy; 2023 Trip Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="detailpage.css" />
+    <title>Trip Detail</title>
+  </head>
+  <body>
+    <header>
+      <iframe
+        scrolling="no"
+        border="0"
+        marginwidth="0"
+        marginheight="0"
+        allowtransparency="true"
+        src="https://www.ashesh.com.np/linknepali-time.php?time_only=no&amp;font_color=0093d0&amp;aj_time=yes&amp;font_size=12&amp;line_brake=0&amp;api=222152h288"
+        width="334"
+        height="22"
+        frameborder="0"
+      ></iframe>
+    </header>
+
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="/index.html">Add Trip</a>
+      <a href="/aboutUs.html">About Us</a>
+      <a href="bookList.html">Book List</a>
+    </nav>
+
+    <form action="bookpage.html">
+      <button>Book Now</button>
+    </form>
+
+    <div id="tripsDetail" class="trip-detail"></div>
+
+    <footer>
+      <p>&copy; 2023 Trip Management System</p>
+    </footer>
+
+    <script>
+      function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return "";
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
+
+      const tripId = getParameterByName("tripId");
+      const title = getParameterByName("title");
+      const imageUrl = getParameterByName("imageUrl");
+      const destination = getParameterByName("destination");
+      const tripDays = getParameterByName("tripDays");
+      const description = getParameterByName("description");
+      const tripCost = getParameterByName("tripCost");
+
+      const tripsDetail = document.getElementById("tripsDetail");
+      tripsDetail.innerHTML = `
+      <h3 class="center-c1">${title}</h3>
+    <img src=${imageUrl} alt="${title}" height="480vh" width="960vw" class="center" />
+    <div class="trip-content center-c1">
+      <p >${description}</p>
+      <p><strong>Destination:</strong> ${destination}</p>
+      <p><strong>Trip Days:</strong> ${tripDays}</p>
+
+      <p><strong>Trip Cost:</strong> ${tripCost}</p>
+    </div>
+  `;
+    </script>
+  </body>
+</html>

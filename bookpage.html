@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Trip Management System</title>
+  </head>
+  <body style="background-color: rgb(64, 68, 68)">
+    <header>
+      <iframe
+        scrolling="no"
+        border="0"
+        marginwidth="0"
+        marginheight="0"
+        allowtransparency="true"
+        src="https://www.ashesh.com.np/linknepali-time.php?time_only=no&amp;font_color=0093d0&amp;aj_time=yes&amp;font_size=12&amp;line_brake=0&amp;api=222152h288"
+        width="334"
+        height="22"
+        frameborder="0"
+      ></iframe>
+    </header>
+
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="/index.html">Add Trip</a>
+      <a href="/aboutUs.html">About Us</a>
+      <a href="bookList.html">Book List</a>
+    </nav>
+
+    <img
+      src="https://cdn.britannica.com/17/83817-050-67C814CD/Mount-Everest.jpg"
+      width="100%"
+      height="500px"
+      alt="Nepal Image 3"
+    />
+
+    <form id="tripForm">
+      <label for="fullName">fullName:</label>
+      <input type="text" id="fullName" required />
+
+      <label for="email">email</label>
+      <input type="email" id="email" required />
+
+      <label for="address">address</label>
+      <input type="text" id="address" required />
+
+      <label for="mobile">mobile</label>
+      <input type="text" id="mobile" required />
+
+      <label for="country">country</label>
+      <input type="text" id="country" required />
+
+      <label for="Trip">Trip</label>
+      <select id="tripSelect" name="tripName"></select>
+
+      <input type="hidden" id="selectedTrip" name="selectedTrip" value="" />
+      <br>
+
+      <button type="button" onclick="bookNow()">Book Now</button>
+    </form>
+
+    <footer>
+      <p>&copy; 2023 Trip Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
